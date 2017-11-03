@@ -38,8 +38,7 @@ router.post('/pokemon', function(req, res) {
     console.log(req.body);
     pokemon.push(req.body);
     res.end('{"success" : "Updated Successfully", "status" : 200}');
-	 $scope.$apply();
+	$scope.apply();
 }); 
-
 
 module.exports = router;
