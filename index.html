@@ -7,32 +7,59 @@
 <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
   <meta charset="utf-8">
   <title>260 Group Chat</title>
-<link href="phone.css" type="text/css" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
         $(document).ready(function(){
+	var temp=getCookie('test');
+	if(temp==1){
+		$('#open').hide();
+	console.log("check cookie",temp);
+	};
         $("#open").hover(function(){
             $('#open').hide('slow');
+	 	setCookie('test','1');
         });
         $("#stall").click(function(){
             $('#open').show('slow');
+		setCookie('test','0');
         });
-        });
+	var d=new Date();
+	document.getElementById("date").innerHTML = d.toDateString();
+	var t=d.getHours();
+	if(t>12)
+	{
+		console.log("true");
+		t=t-12;
+	}
+	var m=d.getMinutes();
+	if(m.length<2)
+	{
+		console.log("m");
+		m="0"+m;
+		console.log(m);
+	}
+	console.log(t,m);
+	t = t+":"+ m;
+	document.getElementById("time").innerHTML = t;
+	});
     </script>
 </head>
 <body>
-
 <div id="open">
-        Hover removes this
-    </div>	
+        <p id="time"></p>
+	<p id="date"></p>
+	<p id="start">Touch to Begin</p>
+    </div>
+	
 <div id='app' ng-app='app' ng-controller='mainCtrl'>
   <div id='app' ng-app='app' ng-controller='mainCtrl'>
   <h1 id="title">CS 260 Message Board</h1>
 	<form align="center" id="query" ng-submit="addPoki()">
 	  Name: <input type="text" id="namebox" ng-model="Name" value=""><br><br>
 	  Post: <br><input id="postbox" type="text" ng-model="Url" value=""><br>
-	  <br><br><input id="postclick" type="submit" value="Post">
+	  <br><br><input id="postclick" type="submit" value="Post" onClick="location.reload()">
 	</form>
 <div id="phone">
 <div id="inside"> 
@@ -41,13 +68,14 @@
     <p>Group Message</p>
     </div>
     <div id="group">
-    <ul ng-if='pokemon.length' class='list'>
+    <ul ng-if='pokemon.length' class='list posts1'>
       <li ng-repeat='p in pokemon' class='pokemon'>
         <h1>{{ p.name }}</h1>
         <p>{{p.avatarUrl}}</p>
       </li>
     </ul>
 </div>
+
     </div>
 </div>
 
