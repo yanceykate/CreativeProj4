@@ -1,0 +1,11 @@
+{
+	"users":[
+	{"username":"test1", "password":"password", "email":"email", "first_name":"John", "last_name":"Doe", "gender":"m", "person_id":"1111"}
+	],
+	"persons":[
+		{"person_id":"1234", "descendant":"you", "first_name":"Charlie", "last_name":"unicorn", "gender":"f", "father":"dad", "mother":"mom", "spouse":"wife"}
+	],
+	"events":[
+		{"event_id":"4321", "descendant":"you", "person_id":"1234", "latitude":"100", "longitude":"100", "country":"USA", "city":"CS", "event_type":"boring", "year":"1999"}
+	]
+}
