@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+<script src="javascripts/app.js"></script>
+<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  <meta charset="utf-8">
+  <title>260 Group Chat</title>
+<link href="phone.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("#open").hover(function(){
+            $('#open').hide('slow');
+        });
+        $("#stall").click(function(){
+            $('#open').show('slow');
+        });
+        });
+    </script>
+</head>
+<body>
+
+<div id="open">
+        Hover removes this
+    </div>	
+<div id='app' ng-app='app' ng-controller='mainCtrl'>
+  <div id='app' ng-app='app' ng-controller='mainCtrl'>
+  <h1 id="title">CS 260 Message Board</h1>
+	<form align="center" id="query" ng-submit="addPoki()">
+	  Name: <input type="text" id="namebox" ng-model="Name" value=""><br><br>
+	  Post: <br><input id="postbox" type="text" ng-model="Url" value=""><br>
+	  <br><br><input id="postclick" type="submit" value="Post">
+	</form>
+<div id="phone">
+<div id="inside"> 
+    <div id="head">
+        <button id="stall">Back</button>
+    <p>Group Message</p>
+    </div>
+    <div id="group">
+    <ul ng-if='pokemon.length' class='list'>
+      <li ng-repeat='p in pokemon' class='pokemon'>
+        <h1>{{ p.name }}</h1>
+        <p>{{p.avatarUrl}}</p>
+      </li>
+    </ul>
+</div>
+    </div>
+</div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+body{
+background-image: url("desktop.jpg");
+    background-size:contain;
+    background-repeat:no-repeat;
+    font-family:"Goudy Stout";
+}
+#phone{
+    background-size:290px,200px;
+    background-repeat:no-repeat;
+    position:relative;
+    top:-475px;
+    left: 820px;
+    right:300px;
+    height: 550px;
+    width:300px;
+    
+}
+#inside{
+    
+    height:490px;
+    width:293px;
+    position:relative;
+    top:35px;
+    left:5px;
+    overflow:auto;
+    font-family:arial;
+    background-color:azure;
+}
+#head{
+    color:white;
+    background-color:greenyellow;
+    position:relative;
+    font-weight:bold;
+    width:293px;
+    text-align:center;
+    
+}
+#head p{
+    display:inline-block;
+    position:relative;
+    left: -30px;
+    font-size:18px;
+}
+#head button{
+    position:relative;
+    left:-45px;
+    background-color:beige;
+    border-color:black;
+    border-radius:4px;
+    height:30px;
+}
+#open{
+    position:relative;
+    top:-290px;
+    background-color:azure;
+    height:490px;
+    overflow:hidden;
+}
+#title{
+    position:relative;
+    font-family:"Britannic Bold", "Goudy Stout";
+    font-size:48px;
+    top:100px;
+    left:240px;
+    width:400px;
+    text-align:center;
+    -ms-transform: rotate(-27deg); /* IE 9 */
+    -webkit-transform: rotate(-27deg); /* Chrome, Safari, Opera */
+    transform: rotate(-27deg);
+}
+#query{
+   position:relative;
+    top:150px;
+    left:250px;
+    width:500px;
+    
+}
+#postbox{
+    width:400px;
+    height:200px;
+}
+#postclick{
+    background-color:black;
+    color: white;
+    width:100px;
+    height:50px;
+    font-family:"Goudy Stout";
+    position:relative;
+    left:80px;
+}
